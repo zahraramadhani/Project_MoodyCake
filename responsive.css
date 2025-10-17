@@ -1,0 +1,203 @@
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .hero-left,
+  .hero-right {
+    width: 100%;
+  }
+  .hero h1 {
+    font-size: 32px;
+  }
+  .hero-left {
+    padding: 20px;
+  }
+  nav {
+    display: none;
+  }
+  .mobile-menu-btn {
+    display: block;
+  }
+  .mobile-nav {
+    display: block;
+  }
+  .cake-character {
+    width: 70px;
+    height: 70px;
+    bottom: 20px;
+    right: 20px;
+  }
+  .card-gallery {
+    grid-template-columns: 1fr;
+  }
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+  }
+  .product img {
+    height: 140px;
+  }
+  .brand-name {
+    font-size: 20px;
+  }
+  .brand-tagline {
+    font-size: 9px;
+  }
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contact-info {
+    grid-template-columns: 1fr;
+  }
+  .modal-content {
+    margin: 10px;
+    max-height: 95vh;
+  }
+  .cart-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  .cart-item img {
+    width: 100%;
+    height: 120px;
+  }
+  .form-row {
+    flex-direction: column;
+  }
+  .form-row .col {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 28px;
+  }
+  .hero .btns {
+    flex-direction: column;
+  }
+  .btn {
+    width: 100%;
+  }
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .product img {
+    height: 120px;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  .menu-tabs {
+    justify-content: center;
+  }
+  .tab-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+  .modal-body {
+    padding: 12px;
+  }
+  .additional-options label {
+    font-size: 14px;
+  }
+}
+
+/* Responsive About Section */
+@media (max-width: 768px) {
+  #about .about-content {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  #about .founder-profiles {
+    justify-content: center !important;
+  }
+
+  #about .founder-profile {
+    min-width: 100px;
+  }
+
+  #about .vision-mission {
+    padding: 15px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #about {
+    padding: 20px 15px !important;
+  }
+
+  #about .founder-profiles {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  #about .founder-profile {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+/* Responsive Additional Options */
+@media (max-width: 768px) {
+  .additional-options {
+    padding: 16px;
+    margin: 16px 0;
+  }
+
+  .option-item {
+    padding: 10px 12px;
+  }
+
+  .option-content {
+    gap: 10px;
+  }
+
+  .option-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+
+  .option-name {
+    font-size: 13px;
+  }
+
+  .option-price {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .additional-options {
+    padding: 12px;
+  }
+
+  .option-item {
+    padding: 8px 10px;
+  }
+
+  .option-details {
+    min-width: 0;
+  }
+
+  .options-total {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .options-total-price {
+    font-size: 14px;
+  }
+}
