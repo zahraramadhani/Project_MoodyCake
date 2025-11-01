@@ -155,7 +155,7 @@ function checkout() {
   const totalPrice = cart.reduce((sum, item) => sum + item.totalPrice, 0);
   const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
 
-  let message = `Halo MoodyCake! 👋\n\nSaya *${currentUser.name}* ingin memesan:\n\n`;
+  let message = `Halo MoodyCake!\n\nSaya *${currentUser.name}* ingin memesan:\n\n`;
 
   cart.forEach((item, index) => {
     message += `*${index + 1}. ${item.name}*\n`;
@@ -173,7 +173,7 @@ function checkout() {
   message += `Nama: ${currentUser.name}\n`;
   message += `Email: ${currentUser.email}\n`;
   message += `Telepon: ${currentUser.phone}\n\n`;
-  message += `Mohon konfirmasi ketersediaan dan total yang harus dibayar. Terima kasih! 🙏`;
+  message += `Mohon konfirmasi ketersediaan dan total yang harus dibayar. Terima kasih!`;
 
   const phoneNumber = "6289653155023";
   const encodedMessage = encodeURIComponent(message);

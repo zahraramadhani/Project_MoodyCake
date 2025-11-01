@@ -28,37 +28,14 @@ function showHome() {
                 </div>
             </div>
             <div class="hero-right">
-                <div class="card-gallery">
-                    <div class="card" onclick="openProductModal(2)">
-                        <img src="https://images.unsplash.com/photo-1624353365286-3f8d62daad51?w=200" alt="Chocolate Lava" />
-                        <div>
-                            <div style="font-weight: 700">Chocolate Lava</div>
-                            <div class="price">${formatCurrency(35000)}</div>
-                        </div>
-                    </div>
-                    <div class="card" onclick="openProductModal(1)">
-                        <img src="https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?w=200" alt="Red Velvet" />
-                        <div>
-                            <div style="font-weight: 700">Red Velvet</div>
-                            <div class="price">${formatCurrency(15000)}</div>
-                        </div>
-                    </div>
-                    <div class="card" onclick="openProductModal(7)">
-                        <img src="https://images.unsplash.com/photo-1524351199678-941a58a3df50?w=200" alt="Cheesecake" />
-                        <div>
-                            <div style="font-weight: 700">Cheesecake</div>
-                            <div class="price">${formatCurrency(52000)}</div>
-                        </div>
-                    </div>
-                    <div class="card" onclick="openProductModal(4)">
-                        <img src="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?w=200" alt="Matcha Roll" />
-                        <div>
-                            <div style="font-weight: 700">Matcha Roll</div>
-                            <div class="price">${formatCurrency(38000)}</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="featured-cake">
+        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400" alt="Cake Spesial MoodyCake" />
+        <div class="cake-caption">
+            <h3>Kue Spesial Hari Ini ✨</h3>
+            <p>Fresh dari oven setiap pagi dengan bahan premium pilihan</p>
+        </div>
+    </div>
+</div>
         </section>
 
         <section id="menu" class="section-transition">

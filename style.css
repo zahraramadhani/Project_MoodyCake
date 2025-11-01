@@ -225,37 +225,16 @@ nav a:hover {
   color: var(--accent);
 }
 
-.card-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-}
-
-.card {
+.featured-cake {
+  text-align: center;
   background: white;
   border-radius: 14px;
-  padding: 12px;
+  padding: 16px;
   box-shadow: var(--card-shadow);
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  cursor: pointer;
   transition: all 0.3s;
 }
 
-.card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 35px rgba(107, 43, 74, 0.15);
-}
-
-.card img {
-  width: 110px;
-  height: 90px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.price {
+.featured-cake:hover .price {
   font-weight: 800;
   color: var(--pink-3);
 }
