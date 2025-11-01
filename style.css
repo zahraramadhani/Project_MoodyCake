@@ -225,6 +225,7 @@ nav a:hover {
   color: var(--accent);
 }
 
+/* Tambahkan di file style.css */
 .featured-cake {
   text-align: center;
   background: white;
@@ -234,9 +235,30 @@ nav a:hover {
   transition: all 0.3s;
 }
 
-.featured-cake:hover .price {
-  font-weight: 800;
-  color: var(--pink-3);
+.featured-cake:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(107, 43, 74, 0.18);
+}
+
+.featured-cake img {
+  width: 100%;
+  max-width: 300px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.cake-caption h3 {
+  margin: 0 0 8px;
+  font-family: "Playfair Display";
+  color: var(--accent);
+}
+
+.cake-caption p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
 }
 
 /* Menu Tabs */

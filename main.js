@@ -29,7 +29,7 @@ function showHome() {
             </div>
             <div class="hero-right">
     <div class="featured-cake">
-        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400" alt="Cake Spesial MoodyCake" />
+        <img src="1.jpg" height="400" width="400" alt="Cake Spesial MoodyCake" />
         <div class="cake-caption">
             <h3>Kue Spesial Hari Ini ✨</h3>
             <p>Fresh dari oven setiap pagi dengan bahan premium pilihan</p>
@@ -45,8 +45,8 @@ function showHome() {
                 
                 <div class="menu-tabs">
                     <button class="tab-btn active" onclick="filterProducts('all')">Semua</button>
-                    <button class="tab-btn" onclick="filterProducts('cake')">Kue</button>
-                    <button class="tab-btn" onclick="filterProducts('cupcake')">Cupcake</button>
+                    <button class="tab-btn" onclick="filterProducts('cakeChar')">Cake Character</button>
+                    <button class="tab-btn" onclick="filterProducts('cakeCust')">Cake Custom</button>
                 </div>
                 
                 <div class="gallery"></div>
@@ -83,29 +83,35 @@ function showHome() {
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
                         <div>
                             <p style="color: var(--muted); line-height: 1.8; font-size: 16px; margin-bottom: 20px">
-                                MoodyCake adalah Cake shop buatan Kami Bersama Yaitu <strong>Nur Annisa Chania, Zahra Ramadhani Sanjaya, Zamziatul Latifah</strong>
+                                MoodyCake adalah Cake shop buatan Kami Bersama Yaitu <strong>Nur Annisa Chania, Zahra Ramadhani Sanjaya dan Zamziatul Latifah</strong>.
                             </p>
                             <p style="color: var(--muted); line-height: 1.8; font-size: 16px; margin-bottom: 20px">
                                 Kami melayani custom design untuk berbagai acara spesial Anda. Mari wujudkan kue impian Anda bersama MoodyCake! 🎂💕
                             </p>
                             
                             <div style="display: flex; gap: 15px; margin-top: 30px; flex-wrap: wrap;">
-                                <div style="text-align: center;">
-                                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--pink-2), var(--pink-3)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; color: white; font-size: 24px;">NC</div>
-                                    <div style="font-weight: 700; color: var(--accent);">Nur Annisa Chania</div>
-                                    <div style="font-size: 12px; color: var(--muted);">Founder</div>
+                            <div style="text-align: center;">
+                                <div style="width: 100px; height: 100px; background: linear-gradient(135deg, var(--pink-2), var(--pink-3)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; overflow: hidden;">
+                                    <img src="14.jpg" alt="Nur Annisa Chania" style="width: 100%; height: 100%; object-fit: cover;">
                                 </div>
-                                <div style="text-align: center;">
-                                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--pink-2), var(--pink-3)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; color: white; font-size: 24px;">ZR</div>
-                                    <div style="font-weight: 700; color: var(--accent);">Zahra Ramadhani</div>
-                                    <div style="font-size: 12px; color: var(--muted);">Co-Founder</div>
-                                </div>
-                                <div style="text-align: center;">
-                                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--pink-2), var(--pink-3)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; color: white; font-size: 24px;">ZL</div>
-                                    <div style="font-weight: 700; color: var(--accent);">Zamziatul Latifah</div>
-                                    <div style="font-size: 12px; color: var(--muted);">Co-Founder</div>
-                                </div>
+                                <div style="font-weight: 700; color: var(--accent);">Nur Annisa Chania</div>
+                                <div style="font-size: 12px; color: var(--muted);">Founder</div>
                             </div>
+                            <div style="text-align: center;">
+                                <div style="width: 100px; height: 100px; background: linear-gradient(135deg, var(--pink-2), var(--pink-3)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; overflow: hidden;">
+                                    <img src="16.jpg" alt="Zahra Ramadhani Sanjaya" style="width: 100%; height: 100%; object-fit: cover;">
+                                </div>
+                                <div style="font-weight: 700; color: var(--accent);">Zahra Ramadhani S</div>
+                                <div style="font-size: 12px; color: var(--muted);">Co-Founder</div>
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="width: 100px; height: 100px; background: linear-gradient(135deg, var(--pink-2), var(--pink-3)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; overflow: hidden;">
+                                    <img src="15.jpg" alt="Zamziatul Latifah" style="width: 100%; height: 100%; object-fit: cover;">
+                                </div>
+                                <div style="font-weight: 700; color: var(--accent);">Zamziatul Latifah</div>
+                                <div style="font-size: 12px; color: var(--muted);">Co-Founder</div>
+                            </div>
+                        </div>
                         </div>
                         
                         <div style="text-align: center;">
@@ -153,7 +159,7 @@ function showHome() {
                 <p style="text-align: center; color: var(--muted); margin-bottom: 30px">Kunjungi toko kami atau pesan online untuk pengalaman terbaik</p>
                 
                 <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.888478923924!2d107.610157474832!3d-6.902392067445671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e64a8a3b31b7%3A0x1fdf2d99ec7f3b8b!2sBandung%20City%2C%20West%20Java!5e0!3m2!1sen!2sid!4v169876543210!5m2!1sen!2sid" 
+                    <iframe src="https://www.google.com/maps?q=-6.2539599,106.7459394&z=17&output=embed" 
                             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 
@@ -162,28 +168,29 @@ function showHome() {
                         <div class="contact-icon">🏪</div>
                         <div class="contact-details">
                             <h4>Alamat Toko</h4>
-                            <p>Jl. Merdeka No. 123, Bandung</p>
+                            <p>Jl. H.Paten, Tangerang Selatan</p>
                         </div>
                     </div>
                     <div class="contact-card">
                         <div class="contact-icon">🕒</div>
                         <div class="contact-details">
                             <h4>Jam Operasional</h4>
-                            <p>Setiap Hari, 08:00 - 20:00 WIB</p>
+                            <p>Setiap Hari, 14:00 - 20:00 WIB</p>
                         </div>
                     </div>
                     <div class="contact-card">
                         <div class="contact-icon">📞</div>
                         <div class="contact-details">
                             <h4>Telepon</h4>
-                            <p>(022) 1234-5678</p>
+                            <p>+62 896-5315-5023</p>
                         </div>
                     </div>
+                    <a href="https://www.instagram.com/beautiful.gurlch?igsh=YzZianlrb2lyMjN3" target="_blank" style="text-decoration: none;">
                     <div class="contact-card">
                         <div class="contact-icon">📱</div>
                         <div class="contact-details">
                             <h4>Instagram</h4>
-                            <p>@moodycake.id</p>
+                            <p>@beautiful.gurlch</p>
                         </div>
                     </div>
                 </div>
