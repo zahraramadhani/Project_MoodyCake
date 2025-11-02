@@ -24,7 +24,7 @@ function showHome() {
                 <p class="lead">Kue homemade spesial untuk hari bahagiamu. Pesan sekarang, antar besok!</p>
                 <div class="btns">
                     <button class="btn btn-pink" onclick="scrollToSection('menu')">Lihat Menu</button>
-                    <button class="btn btn-outline" onclick="showNotification('Info', 'Hubungi kami di Instagram: @moodycake.id', '📱')">Kontak</button>
+                    <button class="btn btn-outline" onclick="showNotification('Info', 'Hubungi kami di Instagram: @beautiful.gurlch', '📱')">Kontak</button>
                 </div>
             </div>
             <div class="hero-right">
