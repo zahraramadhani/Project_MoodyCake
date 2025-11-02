@@ -208,6 +208,17 @@ function showHome() {
   }, 100);
 }
 
+// --- LOGIKA STICKY HEADER ---//
+window.addEventListener("scroll", function () {
+  const header = document.querySelector("header");
+  const scrollThreshold = 50;
+  if (window.scrollY > scrollThreshold) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+});
+
 function showCart() {
   const mainContent = document.getElementById("mainContent");
   const cartPage = document.getElementById("cartPage");

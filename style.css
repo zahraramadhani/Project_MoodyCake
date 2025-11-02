@@ -30,6 +30,18 @@ header {
   align-items: center;
   justify-content: space-between;
   position: relative;
+  transition: all 0.3s ease;
+}
+
+header.scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1100;
+  background: var(--glass);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(107, 43, 74, 0.1);
 }
 
 .brand {
