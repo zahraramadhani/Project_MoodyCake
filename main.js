@@ -32,7 +32,6 @@ function showHome() {
         <img src="1.jpg" height="400" width="400" alt="Cake Spesial MoodyCake" />
         <div class="cake-caption">
             <h3>Kue Spesial Hari Ini ✨</h3>
-            <p>Fresh dari oven setiap pagi dengan bahan premium pilihan</p>
         </div>
     </div>
 </div>

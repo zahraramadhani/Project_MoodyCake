@@ -2,12 +2,45 @@
 let currentUser = JSON.parse(localStorage.getItem("moodycake_user")) || null;
 let users = JSON.parse(localStorage.getItem("moodycake_users")) || [];
 
+// --- NEW HELPER FUNCTIONS FOR IN-MODAL ERROR ---
+
+function showAuthError(modalId, title, body) {
+  const errorDiv = document.getElementById(modalId + "Error");
+  if (errorDiv) {
+    errorDiv.style.display = "block";
+    errorDiv.className = "alert-error"; // Use existing alert-error style from style.css
+    errorDiv.innerHTML = `
+      <div style="font-weight: 700; display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
+        <span style="font-size: 18px;">❌</span> ${title}
+      </div>
+      <div style="font-size: 13px;">${body}</div>
+    `;
+  }
+}
+
+function clearAuthErrors() {
+  const loginError = document.getElementById("loginError");
+  const registerError = document.getElementById("registerError");
+  if (loginError) {
+    loginError.style.display = "none";
+    loginError.innerHTML = "";
+  }
+  if (registerError) {
+    registerError.style.display = "none";
+    registerError.innerHTML = "";
+  }
+}
+
+// -----------------------------------------------
+
 function showLoginModal() {
+  clearAuthErrors(); // Clear errors on open
   document.getElementById("loginModal").classList.add("active");
   document.body.style.overflow = "hidden";
 }
 
 function showRegisterModal() {
+  clearAuthErrors(); // Clear errors on open
   document.getElementById("registerModal").classList.add("active");
   document.body.style.overflow = "hidden";
 }
@@ -16,6 +49,9 @@ function closeAuthModals() {
   document.getElementById("loginModal").classList.remove("active");
   document.getElementById("registerModal").classList.remove("active");
   document.body.style.overflow = "auto";
+
+  // Clear errors and form fields
+  clearAuthErrors();
 
   // Clear form fields
   document.getElementById("loginEmail").value = "";
@@ -32,20 +68,24 @@ function handleRegister() {
   const password = document.getElementById("regPassword").value;
   const phone = document.getElementById("regPhone").value.trim();
 
+  clearAuthErrors();
+
   if (!name || !email || !password || !phone) {
-    showNotification(
+    showAuthError(
+      // Menggunakan fungsi baru untuk in-modal error
+      "register",
       "Data Tidak Lengkap",
-      "Harap isi semua field yang diperlukan.",
-      "⚠️"
+      "Harap isi semua field yang diperlukan."
     );
     return;
   }
 
   if (users.find((user) => user.email === email)) {
-    showNotification(
+    showAuthError(
+      // Menggunakan fungsi baru untuk in-modal error
+      "register",
       "Email Sudah Terdaftar",
-      "Silakan gunakan email lain atau login.",
-      "⚠️"
+      "Silakan gunakan email lain atau login."
     );
     return;
   }
@@ -79,6 +119,8 @@ function handleLogin() {
   const email = document.getElementById("loginEmail").value.trim();
   const password = document.getElementById("loginPassword").value;
 
+  clearAuthErrors();
+
   const user = users.find((u) => u.email === email && u.password === password);
 
   if (user) {
@@ -93,10 +135,11 @@ function handleLogin() {
       "👋"
     );
   } else {
-    showNotification(
+    showAuthError(
+      // Menggunakan fungsi baru untuk in-modal error
+      "login",
       "Login Gagal",
-      "Email atau password salah. Silakan coba lagi.",
-      "❌"
+      "Email atau password salah. Silakan coba lagi."
     );
   }
 }
