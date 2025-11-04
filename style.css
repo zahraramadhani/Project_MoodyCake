@@ -1226,3 +1226,67 @@ pre.debug {
   position: relative;
   z-index: 1; /* Nilai lebih rendah dari notifikasi */
 }
+
+/* style.css */
+
+.hero {
+  /* Diperbesar dari 24px */
+  padding: 40px 24px;
+
+  /* Diperbesar dari 1fr 520px */
+  grid-template-columns: 1fr 560px;
+
+  /* Diperbesar dari 24px */
+  gap: 32px;
+}
+
+.hero h1 {
+  font-family: "Playfair Display";
+  /* Diperbesar dari 44px */
+  font-size: 56px;
+  /* Diperbesar dari 8px */
+  margin: 0 0 16px;
+}
+
+.hero p.lead {
+  /* Ditambahkan ukuran font */
+  font-size: 18px;
+  /* Diperbesar dari 16px */
+  margin: 0 0 24px;
+}
+
+.hero-left {
+  /* Diperbesar dari 28px */
+  padding: 50px;
+}
+
+.hero .btns {
+  /* Diperbesar dari 12px */
+  gap: 16px;
+}
+
+.featured-cake img {
+  width: 100%;
+  /* Diperbesar dari 300px */
+  max-width: 350px;
+  /* Diperbesar dari 250px */
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+#menu {
+  scroll-margin-top: 10px;
+}
+
+/* About & Testimoni: Posisi Nyaman */
+#about,
+#testimonials {
+  scroll-margin-top: 100px;
+}
+
+/* Location: Posisi Aman */
+#location {
+  scroll-margin-top: 120px;
+}

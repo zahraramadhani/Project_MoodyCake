@@ -197,6 +197,8 @@ function showHome() {
         </section>
     `;
 
+  window.scrollTo(0, 0);
+
   // Initialize products in home page
   renderProducts(products);
 
