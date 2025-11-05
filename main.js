@@ -79,7 +79,7 @@ function showHome() {
                 <div style="background: var(--glass); border-radius: 18px; padding: 40px; box-shadow: var(--card-shadow);">
                     <h2 style="font-family: 'Playfair Display'; font-size: 36px; text-align: center; margin-bottom: 20px; color: var(--accent)">About Moody Cake</h2>
                     
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+                    <div class="about-content-grid">
                         <div>
                             <p style="color: var(--muted); line-height: 1.8; font-size: 16px; margin-bottom: 20px">
                                 MoodyCake adalah Cake shop buatan Kami Bersama Yaitu <strong>Nur Annisa Chania, Zahra Ramadhani Sanjaya dan Zamziatul Latifah</strong>.
@@ -88,7 +88,7 @@ function showHome() {
                                 Kami melayani custom design untuk berbagai acara spesial Anda. Mari wujudkan kue impian Anda bersama MoodyCake! 🎂💕
                             </p>
                             
-                            <div style="display: flex; gap: 15px; margin-top: 30px; flex-wrap: wrap;">
+                            <div class="about-team-photos">
                             <div style="text-align: center;">
                                 <div style="width: 100px; height: 100px; background: linear-gradient(135deg, var(--pink-2), var(--pink-3)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; overflow: hidden;">
                                     <img src="14.jpg" alt="Nur Annisa Chania" style="width: 100%; height: 100%; object-fit: cover;">

@@ -165,6 +165,17 @@
     width: 100%;
   }
 
+  /* Penyesuaian khusus untuk halaman About */
+  .about-content-grid {
+    grid-template-columns: 1fr; /* Tumpuk menjadi 1 kolom di HP */
+    gap: 30px;
+  }
+
+  /* Ini akan meratakan teks ke kiri di kolom kiri section About */
+  .about-content-grid > div:first-child {
+    text-align: left;
+  }
+
   #menu {
     scroll-margin-top: 200px;
   }

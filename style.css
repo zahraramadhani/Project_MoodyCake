@@ -1276,6 +1276,22 @@ pre.debug {
   margin-bottom: 12px;
 }
 
+/* CSS BARU UNTUK ABOUT SECTION */
+.about-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-team-photos {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 #menu {
   scroll-margin-top: 230px;
 }
