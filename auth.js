@@ -67,6 +67,7 @@ function handleRegister() {
   const email = document.getElementById("regEmail").value.trim();
   const password = document.getElementById("regPassword").value;
   const phone = document.getElementById("regPhone").value.trim();
+  const termsChecked = document.getElementById("terms").checked; // Ambil status checkbox
 
   clearAuthErrors();
 
@@ -79,6 +80,17 @@ function handleRegister() {
     );
     return;
   }
+
+  // Tambahkan validasi Syarat & Ketentuan
+  if (!termsChecked) {
+    showAuthError(
+      "register",
+      "Syarat & Ketentuan",
+      "Anda harus menyetujui Syarat & Ketentuan untuk mendaftar."
+    );
+    return;
+  }
+  // Akhir penambahan validasi
 
   if (users.find((user) => user.email === email)) {
     showAuthError(

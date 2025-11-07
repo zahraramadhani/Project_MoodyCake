@@ -236,54 +236,48 @@
 
     <!-- Modal: Login -->
     <div class="modal" id="loginModal">
-      <div class="modal-content" style="max-width: 400px">
-        <div class="modal-header">
+      <div class="modal-content auth-modal-content"> <div class="modal-header">
           <h3 style="margin: 0">Login ke MoodyCake</h3>
           <button class="close-btn" onclick="closeAuthModals()">&times;</button>
         </div>
         <div class="modal-body">
           <div id="loginError" style="display: none"></div>
-          <div style="display: flex; flex-direction: column; gap: 12px">
-            <input
-              type="email"
-              id="loginEmail"
-              placeholder="Email"
-              style="
-                padding: 12px;
-                border: 1px solid var(--pink-2);
-                border-radius: 8px;
-                font-size: 14px;
-              "
-            />
-            <input
-              type="password"
-              id="loginPassword"
-              placeholder="Password"
-              style="
-                padding: 12px;
-                border: 1px solid var(--pink-2);
-                border-radius: 8px;
-                font-size: 14px;
-              "
-            />
+          <div class="auth-form-group"> <div class="input-icon-group">
+                <span class="icon">📧</span>
+                <input type="email" id="loginEmail" placeholder="Masukkan Email Anda" />
+            </div>
+            
+            <div class="input-icon-group">
+                <span class="icon">🔒</span>
+                <input type="password" id="loginPassword" placeholder="Masukkan Password" />
+            </div>
+
+            <div class="form-options">
+                <label>
+                    <input type="checkbox" id="rememberMe" style="width: auto; margin-right: 5px;">
+                    Ingat Saya
+                </label>
+                <a href="#" class="forgot-password" onclick="showNotification('Info', 'Fitur lupa password belum tersedia.', '🛠️'); return false;">Lupa Password?</a>
+            </div>
+
             <button
               class="btn btn-pink"
               onclick="handleLogin()"
-              style="width: 100%"
+              style="width: 100%; margin-top: 15px;"
             >
-              Login
+              Login Sekarang
             </button>
             <div
-              style="text-align: center; color: var(--muted); font-size: 14px"
+              style="text-align: center; color: var(--muted); font-size: 14px; margin-top: 15px;"
             >
-              ATAU
+              Belum punya akun?
             </div>
             <button
               class="btn btn-outline"
-              onclick="showRegisterModal()"
-              style="width: 100%"
+              onclick="closeAuthModals(); showRegisterModal()"
+              style="width: 100%; margin-top: 5px;"
             >
-              Buat Akun Baru
+              Daftar Akun Baru
             </button>
           </div>
         </div>
@@ -292,74 +286,55 @@
 
     <!-- Modal: Register -->
     <div class="modal" id="registerModal">
-      <div class="modal-content" style="max-width: 400px">
-        <div class="modal-header">
+      <div class="modal-content auth-modal-content"> <div class="modal-header">
           <h3 style="margin: 0">Daftar Akun Baru</h3>
           <button class="close-btn" onclick="closeAuthModals()">&times;</button>
         </div>
         <div class="modal-body">
           <div id="registerError" style="display: none"></div>
-          <div style="display: flex; flex-direction: column; gap: 12px">
-            <input
-              type="text"
-              id="regName"
-              placeholder="Nama Lengkap"
-              style="
-                padding: 12px;
-                border: 1px solid var(--pink-2);
-                border-radius: 8px;
-                font-size: 14px;
-              "
-            />
-            <input
-              type="email"
-              id="regEmail"
-              placeholder="Email"
-              style="
-                padding: 12px;
-                border: 1px solid var(--pink-2);
-                border-radius: 8px;
-                font-size: 14px;
-              "
-            />
-            <input
-              type="password"
-              id="regPassword"
-              placeholder="Password"
-              style="
-                padding: 12px;
-                border: 1px solid var(--pink-2);
-                border-radius: 8px;
-                font-size: 14px;
-              "
-            />
-            <input
-              type="tel"
-              id="regPhone"
-              placeholder="Nomor Telepon"
-              style="
-                padding: 12px;
-                border: 1px solid var(--pink-2);
-                border-radius: 8px;
-                font-size: 14px;
-              "
-            />
+          <div class="auth-form-group"> <div class="input-icon-group">
+                <span class="icon">👤</span>
+                <input type="text" id="regName" placeholder="Nama Lengkap" />
+            </div>
+
+            <div class="input-icon-group">
+                <span class="icon">📧</span>
+                <input type="email" id="regEmail" placeholder="Email" />
+            </div>
+            
+            <div class="input-icon-group">
+                <span class="icon">🔒</span>
+                <input type="password" id="regPassword" placeholder="Buat Password" />
+            </div>
+
+            <div class="input-icon-group">
+                <span class="icon">📞</span>
+                <input type="tel" id="regPhone" placeholder="Nomor Telepon" />
+            </div>
+            
+            <div class="form-options">
+                <label>
+                    <input type="checkbox" id="terms" style="width: auto; margin-right: 5px;" checked>
+                    Saya setuju dengan <a href="#" onclick="showNotification('Info', 'Halaman syarat dan ketentuan belum tersedia.', '📑'); return false;">Syarat & Ketentuan</a>
+                </label>
+            </div>
+
             <button
               class="btn btn-pink"
               onclick="handleRegister()"
-              style="width: 100%"
+              style="width: 100%; margin-top: 15px;"
             >
               Daftar Sekarang
             </button>
             <div
-              style="text-align: center; color: var(--muted); font-size: 14px"
+              style="text-align: center; color: var(--muted); font-size: 14px; margin-top: 15px;"
             >
-              SUDAH PUNYA AKUN?
+              Sudah punya akun?
             </div>
             <button
               class="btn btn-outline"
-              onclick="showLoginModal()"
-              style="width: 100%"
+              onclick="closeAuthModals(); showLoginModal()"
+              style="width: 100%; margin-top: 5px;"
             >
               Login
             </button>

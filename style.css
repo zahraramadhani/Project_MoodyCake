@@ -1292,6 +1292,82 @@ pre.debug {
   justify-content: center;
 }
 
+/* --- STYLE BARU UNTUK AUTH MODAL (LOGIN/REGISTER) --- */
+
+.auth-modal-content {
+  max-width: 400px; /* Ukuran modal yang lebih pas */
+}
+
+.auth-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Jarak antar field */
+}
+
+.input-icon-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon-group .icon {
+  position: absolute;
+  left: 12px;
+  color: var(--pink-3);
+  font-size: 18px;
+  /* Mengatur tampilan ikon agar tidak mengganggu input */
+  pointer-events: none;
+}
+
+/* Mengubah style input di dalam modal agar lebih rapih */
+.auth-modal-content input[type="text"],
+.auth-modal-content input[type="email"],
+.auth-modal-content input[type="password"],
+.auth-modal-content input[type="tel"] {
+  width: 100%;
+  padding: 14px 14px 14px 45px; /* Tambah padding kiri untuk ikon */
+  border: 1px solid var(--pink-2);
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s;
+  background-color: var(--pink-1); /* Sedikit warna latar belakang */
+}
+
+.auth-modal-content input:focus {
+  outline: none;
+  border-color: var(--pink-3);
+  box-shadow: 0 0 0 2px rgba(255, 111, 168, 0.1);
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+
+.form-options label {
+  display: flex;
+  align-items: center;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.form-options a {
+  color: var(--pink-3);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.form-options a:hover {
+  text-decoration: underline;
+}
+
+/* Mengatur ulang style tombol login/daftar di modal */
+.modal-body .btn {
+  margin-top: 0;
+}
+
 #menu {
   scroll-margin-top: 230px;
 }
